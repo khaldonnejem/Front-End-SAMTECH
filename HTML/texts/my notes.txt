@@ -1,0 +1,950 @@
+#01 | Intorduction And What You Need To Learn
+*What is HTML?
+-Hypertext Markup Language.
+-The Language To Build The Web.
+
+*Versions:
+-4
+-5
+
+*Why I Need To Learn?
+-Front-End Developer.
+-Back-End Developer.
+-Mobile-Developer.
+-Reports.
+
+*What I Need To Learn?
+-Text Editor [Visual Studio Code , Atom].
+-Internet Browser [Google Chrome ,Firfox Developer Edition].
+-Windows And Internet Knowledge.
+-Always Search.
+-Have A Target.
+-Focus.
+-Always Search.
+-Start Any Idea.
+-Always Search Befor Asking.
+
+*How To Study?
+-Watch Videos With Focus.
+-Check Course Code [https://elzero.org/category/courses/html-course].
+-Do The Assignment [https://elzero.org/category/assignments/html-assignments/].
+
+------------------------------------------------------------------------------------------------------
+
+#02 | Elements And Browser
+/* he just show us the page structure and how i view page source by clicking ctrl+u
+and i can go to inspect and go to delete the css files*/
+*download vs code or atom.
+
+------------------------------------------------------------------------------------------------------
+
+#03 | First Project And First Page.
+-create new folder for you e.g. "First_project" , and create a new page e.g. "inde.html"
+*Tags:
+<html></html>
+<head></head>
+<body></body>
+the head contain the meta data
+<title></title> , the title tag in the head
+
+------------------------------------------------------------------------------------------------------
+
+#04 | Head And Nested Elements
+<meta> self colsing tag
+Attributes:charset
+<meta charset="ISO-8859-1"> //no arabic language support
+<meta charset="UTF-8"> 
+<meta name="description" content="This is my first project"> 
+the quoate "This is my first project" appear when i host my web site in the search engine.
+<style></style> this is for css code , like a background color 
+<script></scirpt> this for java scirpt code , like clike a button
+<link rel="stylesheet" href="">
+rel is the relationship
+
+------------------------------------------------------------------------------------------------------
+
+#05 | Comments And Use Cases
+<!-- this is html comment --> 
+<!-- comment 1
+        comment 2 
+-->
+
+------------------------------------------------------------------------------------------------------
+
+#06 | Doctype And standard And Quirks mode
+<!DOCTYPE html> or <!doctype html>
+that means you work on html5
+the browser make rendering for you page , so will can see the page by two way : 1-Quirks mode 2-standard mode
+...if you not specify whats your version of html the browser will go to Quirks mode
+
+------------------------------------------------------------------------------------------------------
+
+#07 | Headings And Use Cases
+
+h1 to h6 
+h1 is the top level of heading
+
+the words worted in the body "This is my project ,welcome"  , its without any tags , if you go to the page opening by browser , and click inspect , look that theres no style to the words .
+and theres a word "user agent stylesheet"
+, the user agent is the browser whice we are work in , thats mean the browser is google chrome.
+
+------------------------------------------------------------------------------------------------------
+
+#08 | Syntax And Tests
+
+the syntax is the strucutre of the code.
+the browser ignore the spaces between lines of code.
+*Attributes: {name = "value" }or you also can do this { name = 'value'} and if the value is one word you can do this {name = value}
+e.g.
+<meta 
+	name = "description"
+	content="...."
+>
+
+------------------------------------------------------------------------------------------------------
+
+#09 | Paragraph Element 
+<p>p is Block element</p> 
+
+
+------------------------------------------------------------------------------------------------------
+
+#10 | Elements Attributes
+
+*Global attributes
+- these attributes is globally ones , and you can use it with any element
+e.g.
+{class , hidden
+
+*Element attributes
+<img src = "" alt = "">
+<a href = ""></a>
+<link rel="stylesheet" href="">
+<audio src=""></audio>
+<video src=""></audio>
+
+
+------------------------------------------------------------------------------------------------------
+
+#11 | Formatting Elements
+
+<b>Bold Tag</b>
+<strong>Bold Tag but important text</strong>
+<i>italic text</i>
+<em>emphasized text </em>
+<mark>Highlight the text</mark>
+<u>underlined</u>
+<small>smaller text</small>
+<del>deleted text</del>
+<ins>inserted text</ins>
+<sub>subscript</sub>
+<sup>superscript</sup>
+
+
+------------------------------------------------------------------------------------------------------
+
+#12 | Links - Anchor Tag
+
+<a href=""></a>
+href:hyper text reference
+<a> is inline element
+------
+<a> attributes:
+	<a href="..." target="_blank"></a> thats mean this link is will open in a new page.
+	target is element attribute
+------
+<a href="#k">Khaldon paragraph</a>
+        <p id="k">khaldon</p>
+-------
+<a href="mailto:khaldon.r.n.n@gmail.com">khaldon.r.n.n@gmail.com</a>
+
+------------------------------------------------------------------------------------------------------
+
+#13 | Image And Deal With Paths
+<img src="" alt="">
+src:the source for the image
+alt:alternate text
+-------
+ <img src="https://elzero.org/wp-content/uploads/2021/01/html-assigns-10-to-14.png" alt="">
+        <img src="../Image/khaldon.jpg" alt="">
+        <img src="missing-image.jpg" alt="NO IMAGE">
+------
+image attributes:
+	width , hight
+
+------------------------------------------------------------------------------------------------------
+#14 | Lists - UL, OL, DL
+
+ul => Unordered List
+<ul>
+<li></li>
+</ul>
+li => List Item
+--------
+nested ul:
+ <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS
+                <ul>
+                    <li>Angular</li>
+                    <li>Reactjs</li>
+                    <li>Vuejs</li>
+                </ul>
+            </li>
+        </ul>
+--------
+ol => Ordered List
+<ol>
+<li></li>
+</ol>
+---------
+ol attributes:
+<ol reversed> to reverse the order
+<ol start="100"> to start order from 100
+<ol type="1"> default type , count in numbers
+<ol type="i"> [Roman numbers]
+<ol type="I"> [Roman numbers]
+<ol type="A"> [A-Z]
+<ol type="a"> [a-z]
+---------
+dl => Description List
+dt => Term
+dd => Description Of The Term
+<dl>
+<dt></dt>
+<dd></dd>
+</dl>
+------------------------------------------------------------------------------------------------------
+
+#15 | Table
+-------
+thead:table head.
+tbody:table body.
+tfoot:table footer.
+tr:table row.
+td:table data cell.
+th:table head.
+-------
+<table border="1">
+            <caption>Students Marks</caption>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Khaldon</td>
+                    <td>Nejem</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>Mohammed</td>
+                    <td>Nejem</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Anas</td>
+                    <td>Nejem</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Ameera</td>
+                    <td>Nejem</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td rowspan="2">160</td>
+                </tr>
+            </tfoot>
+        </table>
+-------
+Attributes:
+<table border="1" cellpadding="2px">
+*not recommended to use border attribute...
+*cellpadding:to control the spaces between the cells , and not recommended to use , coz we will use css to use it.
+*cellspacing
+-------
+<caption></caption> , its the title of the table , and it come after the <table> tag.
+-------
+Merge Table:
+<td colspan="2">160</td>
+
+------------------------------------------------------------------------------------------------------
+
+#16 | Span And Break And Horizontal Rule
+
+<span></span> inline element , the span element for seperate any word or a term in an another elements to control it as you can.
+<br> , break the line
+<hr>, horizontal rule , block elements
+------------------------------------------------------------------------------------------------------
+
+#17 | Div And How To Use
+<div></div>, the div as a container for the other  elements, don't use the text with it, the text is used with <p>
+
+----------
+ <div>
+      <h1>First Project</h1>
+      <p>This is my first project , welcome</p>
+    </div>
+
+    <div class="romantic">
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+    </div>
+    <hr />
+    <div class="police">
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+    </div>
+    <hr />
+    <div class="fantasty">
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+      <div class="book">
+        <h3>Book Title</h3>
+        <p>Book Description</p>
+        <span>$100</span>
+      </div>
+    </div>
+-----------
+------------------------------------------------------------------------------------------------------
+#18 | HTML Entities
+
+&lt;
+lt => less than
+&gt;
+gt => greater than
+&amp; ampersand
+&asymp; for show  ≈
+&copy; for show ©
+
+------------------------------------------------------------------------------------------------------
+
+#19 | Semantic Elements
+
+ <header>Head of website</header>
+**note that : the header is not specific , it may be the header to an section or any thing else
+<nav>link -link -link - link </nav> navigation bar
+<section></section> the content of website
+<section>
+<section>the right side of section</section>
+<aside></aside> the side bar...
+<article></article>
+<footer></footer>
+all of these is block elements
+
+
+------------------------------------------------------------------------------------------------------
+
+#20 | Layout With Div And Classes
+ <body>
+    <div class="header">
+      <h2>Logo</h2>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+    <hr />
+    <ul class="navigation">
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+    </ul>
+    <hr />
+    <div class="content">
+      <img src="../Image/khaldon.jpg" alt="" width="150px" />
+    </div>
+    <div class="sidebar">Side Bar</div>
+    <hr />
+    <div class="footer">Footer</div>
+  </body>
+
+------------------------------------------------------------------------------------------------------
+
+#21 | Layout With Semantic  Elements
+
+  <body>
+    <header>
+      <h2>Logo</h2>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact Us</li>
+      </ul>
+    </header>
+    <hr />
+    <nav>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+    </nav>
+    <hr />
+    <section>
+      <figure>
+        <img src="../Image/khaldon.jpg" alt="" width="150px" />
+        <figcaption>Caption of the image</figcaption>
+      </figure>
+    </section>
+    <article></article>
+    <aside>Side Bar</aside>
+    <hr />
+    <footer>Footer</footer>
+  </body>
+
+------------------------------------------------------------------------------------------------------
+
+#22 | Audio
+<audio src=""></audio>
+or
+ <audio>
+      <source>
+    </audio>
+*search for MIMI types...
+-------
+  <body>
+    <h1>Book Store</h1>
+    <p>This is my book store,welcome</p>
+    <audio controls autoplay loop muted>
+      <source
+        src="../Audio/Sherine - 3ala Bali _ شيرين - على بالي (192 kbps).mp3"
+        type="audio/mpeg"
+      />
+      <source
+        src="../Audio/Sherine - 3ala Bali _ شيرين - على بالي (192 kbps).ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="../Audio/Sherine - 3ala Bali _ شيرين - على بالي (192 kbps).wav"
+        type="audio/wav"
+      />
+      Your browser does not support audio tags
+    </audio>
+  </body>
+------
+the attribute controls for show the buttons and play the audio , and the autoplay is for play the audio when you enter the page , but now its not supported
+the loop for return the audio from the start if its end , and muted its mute the audio
+
+------------------------------------------------------------------------------------------------------
+ #23 | Video
+
+ <video src=""></video>
+
+or
+<video>
+<source>
+<source src="" type="">
+</video>
+
+--------------
+ <body>
+    <h1>Book Store</h1>
+    <p>This is my book store,welcome</p>
+    <video
+      controls
+      width="400"
+      height="200"
+      autoplay
+      loop
+      muted
+      poster="../Image/khaldon.jpg"
+    >
+      <source
+        src="../video/Shortcut Key to Create New Text File.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support video tags
+      <track src="file.vtt" kind="subtitles" srclang="en" label="English" />
+      <track src="file.vtt" kind="subtitles" srclang="it" label="italian" />
+      <!-- vtt:video text trick -->
+    </video>
+  </body>
+----------------
+search for preload attribute
+------------------------------------------------------------------------------------------------------
+
+#24 | Form Part1 - Input Types And Label
+
+  <body>
+    <h1>Book Store</h1>
+    <p>This is my book store , welcome</p>
+    <form>
+      <!-- input is inline element , self-closing tag -->
+      <div>
+        <label>Username</label>
+        <input type="text" />
+      </div>
+      <br />
+      <div>
+        <label>Password</label>
+        <input type="password" />
+      </div>
+      <input type="submit" />
+    </form>
+  </body>
+------------------------------------------------------------------------------------------------------
+#25| Form Part2 - Required ,Placeholder,Value
+
+in past " required="required", but now just required
+
+
+  <body>
+    <h1>Book Store</h1>
+    <p>This is my book store , welcome</p>
+    <form>
+      <!-- input is inline element , self-closing tag -->
+      <div>
+        <input type="text" required placeholder="Username" />
+      </div>
+      <br />
+      <div>
+        <input type="password" required placeholder="password" />
+      </div>
+      <br />
+      <div>
+        <input
+          type="email"
+          placeholder="write a valid email"
+          value="khaldon.r.n.n@gamil.com"
+          required
+        />
+      </div>
+      <input type="submit" value="Save" />
+    </form>
+  </body>
+
+
+------------------------------------------------------------------------------------------------------
+
+#25 | Form Part 3 - Action, Name, Method
+
+*if you dont write action attribute , the browser will send the data to the same page	 
+query string parameter..inspect>>network>>refresh>>the page >>qurey string parameter
+*GET-POST
+ <body>
+    <h1>Book Store</h1>
+    <p>This is my book store , welcome</p>
+    <form action="" method="POST">
+      <!-- input is inline element , self-closing tag -->
+      <div>
+        <input type="text" required placeholder="Username" name="username" />
+      </div>
+      <br />
+      <div>
+        <input
+          type="password"
+          required
+          placeholder="password"
+          name="password"
+        />
+      </div>
+      <br />
+      <div>
+        <input
+          type="email"
+          placeholder="write a valid email"
+          value="khaldon.r.n.n@gamil.com"
+          required
+          name="email"
+        />
+      </div>
+      <input type="submit" value="Save" />
+    </form>
+  </body>
+
+------------------------------------------------------------------------------------------------------
+
+#27 | Form Part 4 - Hidden, Reset, Color,Range, Number
+
+<body>
+    <h1>Book Store</h1>
+    <p>This is my book store , welcome</p>
+    <form action="" method="POST">
+      <input type="hidden" value="khaldon" />
+      <br />
+      <div>
+        <label>Color</label>
+        <input type="color" name="color" placeholder="color" />
+      </div>
+      <div>
+        <label>Range</label>
+        <input
+          type="range"
+          name="range"
+          min="0"
+          max="100"
+          step="20"
+          value="0"
+        />
+      </div>
+      <div>
+        <label>Number</label>
+        <input type="number" name="number" min="10" max="100" step="10" />
+      </div>
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+
+------------------------------------------------------------------------------------------------------
+
+#28 | Form Part 5 - ReadOnly, Disabled, Autofocus
+
+
+*The difference between readonly vs. disabled ??
+when we sent the data from the form , the field with readonly will send the data in that filed , but if the filed is disabled , the filed will not sent with the data.
+*autofocus mean the cursor will stand in the filed you give this attribute.
+*minlength and maxlength>>these for the number of characters... 
+
+<body>
+    <h1>form 2</h1>
+    <hr />
+    <form action="" method="get">
+      <div>
+        <label>Token</label>
+        <input
+          type="text"
+          name="token"
+          hidden
+          value="b92f1fc2fce391ad7af633723afd3055"
+        />
+      </div>
+      <div>
+        <label>Username</label><br />
+        <input
+          type="text"
+          name="username"
+          autofocus
+          minlength="5"
+          maxlength="20"
+          required
+        />
+      </div>
+      <div>
+        <label>Email</label><br />
+        <input type="email" name="email" value="o@o.com" readonly />
+      </div>
+
+      <br />
+      <input type="submit" value="Send" />
+      <!-- file:///D:/NewLast/Front%20End%20SAMTECH/HTML/First_Project/assignment7%5B28-30%5D/123.html?token=b92f1fc2fce391ad7af633723afd3055&username=khaldon&email=o%40o.com -->
+      <input type="reset" value="Empty" />
+    </form>
+  </body>
+
+------------------------------------------------------------------------------------------------------
+
+#29 |  Form Part 6 - Radio And Checkbox
+
+*Radio>>Choose one item from and list.
+*Checkbox>>there's options, you can choose more than one item.
+*"checked" attribute is for make the blue bolit centered on the item you add checked attribute..
+***when you just click the word not just the radio circle button or any filed , the word that beside the circle button or filed , then will chosen automaticaly,or will be intract with the name of label...
+*How you will achieve that??
+1-add "id" attribute in the input.
+2-add the "for" attribute in the label. 
+and the same attribute should have the same value...
+
+-----
+Radio button
+ <form action="" method="GET">
+      <div>
+        <label for="num">Number</label>
+        <input
+          id="num"
+          type="number"
+          name="number"
+          min="10"
+          max="100"
+          step="10"
+        />
+      </div>
+      <hr />
+      <div>
+        <input id="win" type="radio" name="os" value="windows" checked />
+        <label for="win">windows</label>
+      </div>
+      <div>
+        <input id="lin" type="radio" name="os" value="linux" />
+        <label for="lin">linux</label>
+      </div>
+      <div>
+        <input id="mac" type="radio" name="os" value="mac" />
+        <label for="mac">Mac</label>
+      </div>
+      <br />
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+-----------
+checkBox
+-----------
+ <form action="" method="GET">
+      <div>
+        <label for="num">Number</label>
+        <input
+          id="num"
+          type="number"
+          name="number"
+          min="10"
+          max="100"
+          step="10"
+        />
+      </div>
+      <hr />
+      <div>
+        <input id="win" type="checkbox" name="os" value="windows" checked />
+        <label for="win">windows</label>
+      </div>
+      <div>
+        <input id="lin" type="checkbox" name="os" value="linux" />
+        <label for="lin">linux</label>
+      </div>
+      <div>
+        <input id="mac" type="checkbox" name="os" value="mac" />
+        <label for="mac">Mac</label>
+      </div>
+      <br />
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
+    </form>
+------------------------------------------------------------------------------------------------------
+
+#30 | Form Part 7 - Select And Textarea
+
+<form action="" method="GET">
+      <label for="book">Choose Book:</label>
+      <!-- <select name="books" id="book" multiple> -->
+      <select name="books" id="book">
+        <!-- mulitple for choose more than one option but you should use ctrl with click -->
+        <optgroup label="Romantic Books">
+          <option value="1">Book1</option>
+          <option value="2">Book2</option>
+          <option value="3">Book3</option>
+        </optgroup>
+        <optgroup label="Comic Books">
+          <option value="4" selected>Book4</option>
+          <option value="5">Book5</option>
+          <option value="6">Book6</option>
+        </optgroup>
+      </select>
+
+      <hr />
+
+      <textarea
+        name="subject"
+        cols="30"
+        rows="10"
+        placeholder="Test Texts"
+      ></textarea>
+
+      <hr />
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
+    </form>
+
+------------------------------------------------------------------------------------------------------
+
+#31 | Form Part 8 - File, Search, URL, Time
+
+ <form action="" method="GET">
+      <hr />
+      <div>
+        <label>Upload</label>
+        <input name="uplode" type="file" />
+      </div>
+      <hr />
+      <div>
+        <label>Search</label>
+        <input name="search" type="search" />
+      </div>
+      <hr />
+      <div>
+        <label>URL</label>
+        <input name="url" type="url" />
+      </div>
+      <hr />
+      <div>
+        <label>Date</label>
+        <input name="date" type="date" />
+      </div>
+
+      <hr />
+      <div>
+        <label>Month</label>
+        <input name="month" type="month" />
+      </div>
+
+      <hr />
+      <div>
+        <label>Time</label>
+        <input name="time" type="time" />
+      </div>
+
+      <hr />
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
+    </form>
+------------------------------------------------------------------------------------------------------
+
+#32 | Form Part 9 - Data List, Novalidate, Target
+
+ <form action="" method="get" target="_blank">
+      <label for="prog">select a language:</label>
+      <input list="programming" id="prog" name="prog" />
+      <datalist id="programming">
+        <option value="Python"></option>
+        <option value="PHP"></option>
+        <option value="C#"></option>
+        <option value="C"></option>
+        <option value="C++"></option>
+        <option value="Java"></option>
+        <option value="Scala"></option>
+      </datalist>
+      <hr />
+      <input type="reset" value="Empty" />
+      <input type="submit" value="Send" />
+    </form>
+
+------------------------------------------------------------------------------------------------------
+ #33 | Q, BlockQuote, Wbr, Bdi, Button
+
+ <body>
+    <q>This Is Wise Word</q>
+    <!-- q-inline element -->
+    <blockquote>This Is Wise Word</blockquote>
+    <!-- block element -->
+    <button>Click</button>
+    <div>
+      Lorem ipsum dolor sit <wbr /> amet consectetur adipisicing elit. Veniam
+      soluta debitis, totam fuga<wbr /> fugit blanditiis dolore dolor assumenda
+      exercitationem autem ratione <wbr />reiciendis ad ipsam amet quos ex?
+      Ratione, dolores veritatis!
+    </div>
+    <!-- word break opportunity -->
+
+    <p>السلام 2 welcome</p>
+    <p><bdi>السلام</bdi> 2 welcome</p>
+    <!-- bi directional isolation -->
+  </body>
+*Wbr:Word Break Opportunities.
+
+------------------------------------------------------------------------------------------------------
+
+#34 | iFrame, Pre, Code
+
+<body>
+    <code> var x = 10; var y = 20; consol.log(x+y); </code>
+    <pre>
+      This Is
+      P
+      Line1
+      Line2
+          </pre
+    >
+    <iframe src="https://elzero.org/" width="800" height="400"></iframe>
+  </body>
+------------------------------------------------------------------------------------------------------
+
+#35 | Accessibility Intro امكانية الوصول
+
+* Inspect>>Lighthouse>>generate report or analyse page load
+    <form action="">
+      <label for="user">Username</label>
+      <input id="user" name="user" type="text" />
+      <button>Send</button>
+      <button>Reset</button>
+    </form>
+انو تحسن من امكانية الوصولوهيك كثير وعالم
+
+------------------------------------------------------------------------------------------------------
+
+#36 | ARIA And Screen Readers
+ARIA: “Accessible Rich Internet Applications."
+*theres a programm name JAWS >>screen reader , read the contact
+*tabindex >>when you click on tap the cursor will hover the element with tabindex ="0" 
+
+<body>
+  <h1>Book Title</h1>
+
+  <h3>Chapter One</h3>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+    temporibus tempore. Aliquam eaque sint commodi culpa quia unde, totam
+    delectus molestias at distinctio tempore in dicta accusamus illum illo
+    architecto!
+    <hr>
+  </p>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi provident
+    at ipsa perspiciatis deleniti modi corporis, inventore aperiam ab. Animi
+    dolorem eos incidunt totam laboriosam aut tenetur, debitis in at.
+  </div>
+  <h2>Inside Chapter One</h2>
+  <form action="">
+    <label for="skill1">Skill One</label>
+    <input id="skill1" type="checkbox" checked />
+    <label for="skill2">Skill TWO</label>
+    <input id="skill2" type="checkbox" />
+  </form>
+  <hr>
+  <div role="checkbox" aria-checked="true" tabindex="0" aria-labelledby="plan1">Plan One</div>
+  <label id="plan1">Plane One Label</label>
+  <div  tabindex="0">Plan Two</div>
+  <div  tabindex="0">Plan Three</div>
+</body>
+------------------------------------------------------------------------------------------------------
+
+#37 | The End And What To Do
+
+https://elzero.org/
+جزاه الله خيرا

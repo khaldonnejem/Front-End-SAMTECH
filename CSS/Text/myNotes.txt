@@ -1,0 +1,100 @@
+#01 | Introduction And What I Need To Learn
+
+New Content In The Last Years.
+New Quality.
+Merge CSS All Levels.
+Old Content Is Not Bad.
+What About Old Content.
+Focus On Important Content (Flex Box).
+Notes On Old Properties(Float).
+---
+What is CSS?
+Cascade Style Sheet.
+Language To Create The Presentaiton And Visuals.
+Ship + Building + Skeleton.
+---
+Levels:
+CSS Level 1.
+CSS Level 2.
+CSS Level 3.
+---
+Why I Need To Learn?
+Web Designer.
+UI Developer.
+Front-End Developer.
+---
+What I Need To Learn?
+Learn HTML Language.
+Text Editor [Visual Studio Code , Atom].
+Internet Browser [Google Chrome, Firfox Developer Edition].
+Windows And Internet Knowledge.
+Always Search.
+Have A Target.
+Focus.
+Always Search.
+Start Any Idea.
+Always Search Before Asking.
+---
+How To Study?
+Watch Videos With Focus.
+Check Course Code [https://elzero.org/category/courses/css-course].
+Do The Assignments [https://elzero.org/category/assignments/css-assignments/].
+
+------------------------------------------------------------------------------------------------------
+
+ #02 | Your First Project And Syntax
+
+<link rel="stylesheet" href="style.css">
+Selector {
+    property :Value; /* This line is decleration*/
+    property2 :Value
+
+}
+<p>This Is Paragrahp</p>
+    <p class="class-p">Class Type</p>
+    <p id="id-p">Id Type</p>
+p {
+    color: red; 
+    font-size: 40px;
+}
+
+.class-p {
+    color: blue;
+    font-size: 50px;
+}
+#id-p {
+    color: indianred;
+    font-size: 70px;
+}
+
+------------------------------------------------------------------------------------------------------
+
+ #03 |0 Element Styling
+
+Comment in css /*this is comments*/
+3 ways to call the css:
+1-External Style.<link rel="stylesheet" href="style.css">
+2-Internal Style.<style>...</style>
+3-Inline Style.<p style="..."></p>
+*the inline style is the most powerfull but its not the best chocie..
+------------------------------------------------------------------------------------------------------
+
+#04 | Name Conventions And Rules
+
+class , id >>identifers.
+Rules:
+-you cannot start the identifer with number [class="2re"],this is not acceptable.
+-you can do this: [class="_2re"], [id="_2re"],[class="-2re"].
+*.userTest or .user-test >> user-test is best
+
+Case Type				Example
+Original Variable As String		some awesome var
+Camel Case 			someAwesome Var
+Snake Case			some_awesome_var
+Kebab Case 			some-awesome-var
+Pascal Case 			SomeAwesomeVar
+Upper Case Snake Case		SOME_AWESOME_VAR
+
+------------------------------------------------------------------------------------------------------
+
+#05 | Background - Color, Image, Repeat
