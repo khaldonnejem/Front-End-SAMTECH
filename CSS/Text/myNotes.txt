@@ -98,3 +98,102 @@ Upper Case Snake Case		SOME_AWESOME_VAR
 ------------------------------------------------------------------------------------------------------
 
 #05 | Background - Color, Image, Repeat
+
+div { 
+    Background-color: red; >>color name
+    Background-color: rgb(255 0 0); >>Red Green Blue
+    Background-color:rgb(0 0 0 / 50%); >> Red Green Blue Alpha Channel الشفافية
+    Background-color:#FF0000; >> color Hex code 
+    background-image: url("../../image/css-colors.jpg");
+    background-repeat:repeat;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+}
+
+------------------------------------------------------------------------------------------------------
+
+ #06 | Background - Attachment, Position, Size
+
+div {
+    background-attachment: scroll;
+    background-attachment: fixed;
+     background-position:  center;
+   background-position: center top;
+   background-position: right bottom;
+   background-position: left bottom;
+   background-position: left center;
+   background-position: left top;
+   background-position: 50% 50%;
+   background-position: 100% 100%;
+   background-position: 100% 50%;
+   background-size: auto; ( the default , the photo with original size)
+   background-size: cover; (it cover the content and it can stretch)
+   background-size: contain; (it resize the background to make it fully visible)
+   background-size: 100px 200px; (width height)
+   background-size: 100% 50%;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#07 | Padding الهوامش الداخلية
+
+/* background: #DDD; */
+-if you set just background like this with out any addition like background-color ,etc.. , if you click inspect , the browser will show you beside the background property an > arrow , thats mean it sets many property included under term background as itself...
+
+/* padding : Top Right Bottom Left */
+padding: 10px;
+-also here if you go inspect the page , you will find padding:> 10 px; its mean the top, right, bottom and left are all set to 10px.
+
+/* padding: 10px 20px; */
+-here it's mean :10px 20px 10px 20px.
+
+/* padding:10px 20px 15px */
+-here its mean :10px 20px 15px 20px.
+
+{ It Taking The value Face To It, Top & Bottom, Right & Left }
+
+/* padding:0 0 10px; */
+-here we want the bottom is 10px padding and the other's Zero's , we set the top to 0 and the right to 0 and the bottom to 10px and the left it will take the value from the opposite side.
+-but you can replace it with /* padding-bottom:10px;*/
+
+/* padding-top , padding-left , padding-right, padding-bottom */
+
+padding accept px, % , but it not accept -ve(negative).
+
+------------------------------------------------------------------------------------------------------
+
+#08 | Margin
+
+div {
+    margin :10px;
+    width:70%;
+}
+
+*margin is the outside border of div(element)
+*padding is the interior border of div(element)
+
+*margin accept negative value
+*margin accept percentage %
+
+div {
+   
+background-color: #DDD;
+padding: 10px;
+margin: 10px;
+width: 70%;
+}
+i want the div center,i took 70% of the space , thats mean its remain 30%
+, i need this 30% to be 15% on the right and 15% on the left
+i will add div {
+    ....
+    margin-left:15%;
+}
+*but theres a way best than this :
+div {
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+or you can write:margin:auto; 
+but it cant control the top...
