@@ -1,8 +1,8 @@
-/* Good */
+/* Bad */
 .USERNAME {
 }
 
-/* Good */
+/* Bad */
 .UserName {
 }
 

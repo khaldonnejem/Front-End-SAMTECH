@@ -111,6 +111,16 @@ div {
     background-repeat: repeat-y;
 }
 
+    *RGB (Red,Green,Blue)
+    background-color: rgb(0, 0, 255);
+    ===============================
+    *HSL (Hue,Saturation,Lightness)
+    background-color: hsl(240, 100%, 50%);
+    ===============================
+    *Hex (Hexadecimal)
+    background-color: #0000FF;
+
+
 ------------------------------------------------------------------------------------------------------
 
  #06 | Background - Attachment, Position, Size
