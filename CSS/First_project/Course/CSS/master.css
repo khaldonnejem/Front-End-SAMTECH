@@ -1,11 +1,9 @@
-div {
-   
-background-color: #DDD;
-padding: 10px;
-margin: 10px;
-width: 70%;
-/* margin-left: 15%;
-margin-left: auto;
-margin-right: auto;*/
-margin: auto;
+div{
+    background-color: red;
+    margin: 10px 0;
+  
+}
+.first {
+    /* display: none; */
+    visibility: hidden;
 }

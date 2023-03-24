@@ -207,3 +207,128 @@ div {
 }
 or you can write:margin:auto; 
 but it cant control the top...
+------------------------------------------------------------------------------------------------------
+
+#09 | Border الحواف
+
+(border size ,color,type)
+
+div {
+    bordre-width:2px;               >>that's mean all border are 2px
+    bordre-width:2px 4px;           >>that's mean top and bottom are 2px and right and left are 4px
+    bordre-width:2px 4px 3px;       >>that's mean top is 2px, right and left are 4px,bottom is 3px
+    bordre-width:2px 4px 3px 5px;   >>that's mean top is 2px, right is 4px ,bottom is 3px and the left is 5px
+}
+div {
+    border-width:10px;
+    border-color:red; or  border-color: red blue green yellow;
+    border-style:solid; or border-style: solid dashed dotted ridge;
+}
+    *here a shorthand:
+div {
+    border:10px solid red;
+}
+
+    *Border Style [type]:
+    dotted - Defines a dotted border
+    dashed - Defines a dashed border
+    solid - Defines a solid border
+    double - Defines a double border
+    groove - Defines a 3D grooved border. The effect depends on the border-color value
+    ridge - Defines a 3D ridged border. The effect depends on the border-color value
+    inset - Defines a 3D inset border. The effect depends on the border-color value
+    outset - Defines a 3D outset border. The effect depends on the border-color value
+    none - Defines no border
+    hidden - Defines a hidden border
+
+     <div>
+      <p style="border: 5px red dotted">dotted</p>
+      <hr />
+      <p style="border: 5px red dashed">dashed</p>
+      <hr />
+      <p style="border: 5px red solid">solid</p>
+      <hr />
+      <p style="border: 5px red double">double</p>
+      <hr />
+      <p style="border: 5px red groove">groove</p>
+      <hr />
+      <p style="border: 5px red ridge">ridge</p>
+      <hr />
+      <p style="border: 5px red inset">inset</p>
+      <hr />
+      <p style="border: 5px red outset">outset</p>
+      <hr />
+      <p style="border: 5px red none">none</p>
+      <hr />
+      <p style="border: 5px red hidden">hidden</p>
+      <hr />
+    </div>
+
+------------------------------------------------------------------------------------------------------
+
+#10 | Outline
+
+div {
+  background-color: #DDD;
+  width: 300px;
+  padding: 10px;
+  outline: 10px solid red;
+  border: 10px solid blue;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#11 | Display - Block, Inline Block, Inline
+
+*Display is responsible for displaying the elements
+*if you have inline you can make it block and vice versa...
+
+/*
+
+  Block (div)
+
+  - Take Full Width If No Width
+  - Add Line Break
+  - Respect Padding, Margin, Width, Height
+
+  Inline (span)
+
+  - Do Not Repsepct Width, Height
+  - Respect Padding And Margin [ Just Right + Left ]
+  - Do Not Add Line Break
+  - Allow Elements Before And After It in The Same Line
+
+  Inline-Block (span)
+
+  - Allow Elements Before And After It in The Same Line
+  - Respect Padding, Margin, Width, Height
+
+*/
+div {
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 50;
+}
+span {
+  background-color: #EEE;
+  display: inline-block;
+}
+------------------------------------------------------------------------------------------------------
+
+ #12 | Element Visibility And Use Cases
+
+
+ div {
+  background-color: red;
+  margin: 10px 0;
+}
+.first {
+  visibility: hidden;
+}
+
+display:none: for hide the element
+visibility: visible; the default value
+
+*The difference between display none and visibility hidden is (none:it remove the element from the work flow , but hidden it just hid the element but it's still exist in its place)

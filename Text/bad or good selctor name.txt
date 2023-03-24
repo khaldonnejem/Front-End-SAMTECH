@@ -1,0 +1,13 @@
+.USERNAME: This selector name is not ideal. It is written in all uppercase, which is harder to read and can be confusing. It's better to use lowercase or camelCase notation for selector names.
+
+.UserName: This selector name is better than .USERNAME, but it's still not ideal. It uses camelCase notation, which is good, but the first letter is capitalized, which is not consistent with common naming conventions in CSS. It's better to use all lowercase for selector names.
+
+.user-name: This selector name is good. It uses lowercase letters and a hyphen as a word separator, which is a common convention in CSS for class names.
+
+.userName: This selector name is okay, but not as good as .user-name. It uses camelCase notation, which is good, but it doesn't use a word separator, which can make the name harder to read. It's better to use a hyphen or an underscore as a word separator.
+
+.usernameprofile: This selector name is okay, but it's a bit long and might be hard to read. It uses lowercase letters and no word separator, which is consistent with common naming conventions in CSS. However, it might be better to use a shorter, more descriptive name that conveys the purpose of the selector more clearly.
+
+
+
+
