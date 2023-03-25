@@ -332,3 +332,112 @@ display:none: for hide the element
 visibility: visible; the default value
 
 *The difference between display none and visibility hidden is (none:it remove the element from the work flow , but hidden it just hid the element but it's still exist in its place)
+
+------------------------------------------------------------------------------------------------------
+
+#13 | Grouping Multiple Selectors
+
+.one {
+    border-bottom: 2px solid red;
+    color: red;
+}
+.two {
+    border-bottom: 2px solid green;
+    color: green;
+}
+.three {
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+.four {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.one,
+.two,
+.three,
+.four,
+p {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #eee;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#14 | Nesting
+
+  <body>
+    <div>
+      <h2>Title</h2>
+      <p>Paragraph Inside Div</p>
+      <p class="special">Paragraph Inside Div With Class</p>
+    </div>
+    <p class="special">Paragraph Outside Div</p>
+  </body>
+
+
+    div .special {
+    color: red;
+    }
+
+------------------------------------------------------------------------------------------------------
+
+#15 | Dimensions - Width And Height
+
+<body>
+    <div>Khaldon Nejem</div>
+    <hr />
+    <div>Khaldon Rafat Nejem</div>
+    <hr />
+    <div>
+      Khaldon Rafat Mahmoud Nejemaskldjf;aaaaaaaa
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj
+    </div>
+  </body>
+div  {
+    background-color: red;
+    padding: 10px;
+    display: inline-block;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 40px;
+    max-height: 60px;
+}
+div  {
+    background-color: red;
+    padding: 10px;
+    width: fit-content;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#16 | Overflow - Overflow-X And Overflow-Y
+
+ <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores animi
+      consectetur nobis odit, aliquam non ipsam nam magni qui tenetur quam,
+      voluptates velit officia debitis quo quas veritatis impedit sapiente?
+    </div>
+  </body>
+
+
+  div  {
+    width: 150px;
+    height:  150px;
+    background-color: #aaa;
+    margin: 10px auto;
+    border-radius: 6px;
+    overflow: visible; /* default value for overflow*/
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+    overflow-x: ;
+    overflow-y: ;
+}

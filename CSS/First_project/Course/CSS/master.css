@@ -1,9 +1,9 @@
-div{
+div  {
     background-color: red;
-    margin: 10px 0;
-  
-}
-.first {
-    /* display: none; */
-    visibility: hidden;
+    padding: 10px;
+    display: inline-block;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 40px;
+    max-height: 60px;
 }
