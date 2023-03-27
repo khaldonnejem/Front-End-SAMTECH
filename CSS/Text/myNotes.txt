@@ -441,3 +441,131 @@ div  {
     overflow-x: ;
     overflow-y: ;
 }
+
+------------------------------------------------------------------------------------------------------
+
+#17 | Text - Color And Shadow
+
+Syntax => text-Shadow: H-shadow (horizontal) , V-shadow (vertical) , blur, color of shadow
+
+div  {
+background-color: #f9f9f9;
+color: rebeccapurple; 
+text-shadow: 0 0 0 red;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#18 | Text - Alignment
+
+--Alignment
+--Direction
+--Vertical Alignment
+
+*default direction for any page is Left-to-Right , coz html is written in english language.
+----------------
+<div>khaldon web company</div>
+div  {
+background-color: #f9f9f9;
+text-align: center;
+text-align: right;
+text-align: left; deafult 
+direction: ltr;deafult
+direction: rtl ;
+}
+---------------
+  <div>
+      Khaldon Web <img src="https://via.placeholder.com/60" alt="" />Company
+  </div>
+  img {
+      vertical-align: top ;
+      vertical-align: bottom ;
+      vertical-align: middle;
+      }
+
+------------------------------------------------------------------------------------------------------
+
+#19 | Text - Decoration And Transform
+
+<div>elzero web school</div>
+div {
+    background-color: #f9f9f9;
+    text-decoration: line-through; /* 1 */
+    text-decoration: underline;/* 2 */
+    text-decoration: overline;/* 3 */
+}
+----------------------
+ <a href="#">Google</a>
+ a {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+}
+----------------------
+<div>elzero web school</div>
+div {
+    background-color: #f9f9f9;
+    text-transform: capitalize; /* first char set to captial */
+    text-transform: uppercase; /* all char's set to captial */
+    text-transform: lowercase; /* all char's set to samll */
+}
+
+------------------------------------------------------------------------------------------------------
+
+#20 | Text - Spacing
+
+--Letter Spacing : the space between the letters.
+--Indentation : the space before the words.
+--Line Height : vertical line spacing.
+--Word Spacing + Wraping + White Space
+--------------------------
+<div>elzero web school</div>
+div {
+    background-color: #f9f9f9;
+    letter-spacing: 2px;
+    text-indent: 100px;
+}
+--------------------------
+<div>Lorem</div>
+div {
+  line-height:1; == line-height:100%;
+  /* 1.5 == 150% */
+  /* 1.6 or 1.7 is the appropriate height */
+}
+--------------------------
+word spacing: the space between the words.
+ word-spacing: 5px;
+--------------------------
+white space:when the cursor end in the line, its go to the next line.
+white-space:normal; /* when it's reach to the max width to that element , it's going down (wrapping).*/
+white-space:nowrap; /* the words will continue in the same line.
+--------------------------
+word break:prevent form flow words ,etc..., usally used for links.
+div {
+    background-color: #747373;
+    width: 300px;
+    word-break: normal;
+    word-break: break-all;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#21 | Text - Overflow And Use Cases 
+
+    <div title="Welcome To Elzero Web School, Hello">
+      Welcome To Elzero Web School, Hello
+    </div>
+    div {
+    background-color: #ddd;
+   padding: 10px;
+   width: 200px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; /* ellipsis will show that theres a more content ... */
+}
+ 
+------------------------------------------------------------------------------------------------------
+
