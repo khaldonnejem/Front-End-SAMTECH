@@ -569,3 +569,246 @@ div {
  
 ------------------------------------------------------------------------------------------------------
 
+#22 | Inheritance
+
+<body>
+    <div>
+      <h3>Elzero Web School</h3>
+      <p>Welcome To The Website</p>
+    </div>
+  </body>
+
+  ----
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+div {
+text-align: center;
+padding: 20px;
+background-color: #eee;
+font-size: 20px;
+border: 2px solid red;
+}
+
+div p {
+    border: 2px solid;
+    border-color: inherit;
+    padding: inherit;
+}
+ 
+
+------------------------------------------------------------------------------------------------------
+
+#23 | Typography - Font Family
+
+*Web Safe Fonts : these fonts will be displayed in any other pc in the world..
+(https://fonts.google.com/)
+
+<body>
+    <div class="with-ser">Welcome To Elzero Web School, Hello F</div>
+    <div class="san-ser">Welcome To Elzero Web School, Hello F</div>
+  </body>
+ .with-ser {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.san-ser {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.with-ser ,
+.san-ser {
+    padding: 20px;
+    background-color: #eee;
+} 
+------
+body {
+    font-family: 'Cairo', sans-serif;
+
+}
+div {
+    padding: 10px;
+    background-color: #eee;
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+#24 | Typography - Font Size And CSS Units
+
+
+CSS Units:
+
+--px
+--em            => Time .. one em it one time
+--rem           => Root Time .. take the size from root element (<html></html>)
+--percentage    =>Take a percentage from his father
+--vw            =>[View Port Width], page width
+
+Read 
+--vmin          =>[View Port Minimum Height]
+--vh            =>[View Port Height],page height
+
+--view port is the all page (the white blank).
+------------------------------
+Another Approach:
+--vh:This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height.
+
+--vw:This unit is based on the width of the viewport. A value of 1vw is equal to 1% of the viewport width.
+
+--vmin:This unit is based on the smaller dimension of the viewport.
+        If the viewport height is smaller than the      width,
+        the value of 1vmin will be equal to 1% of the viewport height.
+        Similarly, if the viewport width is smaller than the height,
+        the value of 1vmin will be equal to 1% of the viewport width.
+
+--vmax:This unit is based on the larger dimension of the viewport.
+        If the viewport height is larger than the width,
+        the value of 1vmax will be equal to 1% of viewport height.
+        Similarly, if the viewport width is larger than the height,
+        the value of 1vmax will be equal to 1% of hte viewport width.
+-------------------------------
+[em]
+1em = 16px This is wrong
+*Default Font Size For Web Page Is 16px
+div {
+    font-size: 20px;
+}
+
+div span {
+    font-size: 2em; /*Here span is 40px*/
+} 
+-------------------------------
+[em]
+body {
+    font-size: 40px;
+}
+div span {
+    font-size: 2em; /*Here span is 80px*/
+}
+-------------------------------
+[rem]
+body {
+    font-size: 40px;
+}
+
+html {
+    font-size: 100px;
+}
+div {
+    font-size: 20px;
+}
+
+div span {
+    font-size: 2rem; /*Here span is 200px*/
+}
+
+-------------------------------
+[%]
+div {
+    font-size: 20px;
+}
+
+div span {
+    font-size: 100%; /*Here span is 20px*/
+    font-size: 150%; /*Here span is 30px*/
+}
+-------------------------------
+[vw]
+1vw = 1% from view port width.. e.g.(900 , vw = 9)
+width = 5vw >> 5 * 9 = 45
+-------------------------------
+[vw]
+div {
+    font-size: 5vw;
+    /* note that is set the width of page to 500px */
+    /* that mean 5 * 5 = 25px */
+}
+-------------------------------
+Some Examples:
+
+-If the viewport is 1200px wide and 1000px high, the value of 10vw will be 120px and the value of 10vh will be 100px. Since the width of the viewport is greater than its height, the value of 10vmax will be 120px and the value of 10vmin will be 100px.
+
+-If the device is now rotated so that the viewport becomes 1000px wide and 1200px high, the value of 10vh will be 120px and the value of 10vw will be 100px. Interestingly, the value of 10vmax will still be 120px because it will now be determined based on the height of the viewport. Similarly, the value of 10vmin will still be 100px.
+
+-If you resize the browser window so that the viewport becomes 1000px wide and 800px high, the value of 10vh will become 80px and the value of 10vw will become 100px. Similarly, the value of 10vmax will become 100px and the value of 10vmin will become 80px.
+
+------------------------------------------------------------------------------------------------------
+
+#25 | Typography - Font Style And Variant And Weight
+
+ <body>
+    <div>elzero web school</div>
+    <p>Elzero Web School</p>
+  </body>
+
+  div {
+        /* font-style: italic; */
+        font-variant: small-caps; /*its convert the page to capital letter but its small than normal */
+        font-weight: bold;
+        /* font-weight:700 ;(100-900) */
+        font-weight: normal;
+}
+p {
+  text-transform: uppercase;
+}
+
+------------------------------------------------------------------------------------------------------
+
+ #26 | Mouse Cursor
+
+   <body>
+    <a href="#">Google</a>
+    <span>Test</span>
+    <button>Click</button>
+    <hr />
+    <p style="cursor: grab">Test P</p>
+    <p style="cursor: move">Test P</p>
+    <p>Test P</p>
+  </body>
+
+  button {
+  background: transparent;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#27 | Float And Clear
+
+
+    <body>
+    <div class="parent">
+      <div>Product One</div>
+      <div>Product Two</div>
+      <div>Product Three</div>
+      <div>Product Four</div>
+      <p class="clear"></p>
+    </div>
+    <p>This Is P For Testing Float</p>
+  </body>
+
+  
+.parent {
+    background-color: red;
+    padding: 10px;
+    /* overflow: hidden; */
+  }
+  .parent div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    display: inline-block;
+    width: 25%;
+    float: left;
+    /* float: right; */
+ 
+  
+}
+/* reset layout */
+  .clear {
+    clear: both;
+  }
