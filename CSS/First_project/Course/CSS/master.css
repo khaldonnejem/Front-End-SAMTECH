@@ -1,22 +1,21 @@
-
 .parent {
-    background-color: red;
-    padding: 10px;
-    /* overflow: hidden; */
-  }
-  .parent div {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    background-color: #eee;
-    display: inline-block;
-    width: 25%;
-    float: left;
-    /* float: right; */
- 
-  
+  background-color: red;
+  padding: 10px;
+  /* overflow: hidden; */
+}
+.parent div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  display: inline-block;
+  width: 25%;
+  /* float: left; */
+  float: right;
+
+
 }
 /* reset layout */
-  .clear {
-    clear: both;
-  }
+.clear {
+  clear: both;
+}

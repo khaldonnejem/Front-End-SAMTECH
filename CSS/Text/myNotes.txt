@@ -812,3 +812,88 @@ p {
   .clear {
     clear: both;
   }
+
+------------------------------------------------------------------------------------------------------
+
+#28 | Mastering The CSS Calculation
+
+-------------------------
+1-The Original Way:
+    <body>
+      <div>Product One</div>
+      <div>Product Two</div>
+      <div>Product Three</div>
+      <div>Product Four</div>
+    </body>
+-- Content Width Is: 100%
+-- 5 Spaces => 1% * 5 = 5% From Content Width
+-- Thats Mean 95% Available Space
+-- We Have 4 Elements : The Width Is 95% / 4 =23.75
+    body {
+    margin: 0;
+    }
+    div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  float: left;
+  width: 23.75%;
+  margin-left: 1%;
+}
+
+*but here if we add another div , product five, it will be down unliklye
+*theres a rule:
+-if you want the spaces between all elements : n-1
+-if you wan the spaces befor and after all elements : n+1
+(n is number of elements, e.g. products in last example)
+
+-------------------------
+*also original way
+
+   Content Width Is: 100%
+  6 Spaces  1% * 6 => 6% From Content Width
+  94% Available Space
+  5 Elements The Width Is: (100% - 6%) / 5 = 18.8
+  
+  width :18.8%;
+-------------------------
+*the professional way using calc()
+
+
+  Content Width Is: 100%
+  6 Spaces  10px * 6 => 60px From Content Width
+  100% - 60px Available Space
+  5 Elements The Width Is: (100% - 60px) / 5
+
+  body {
+  margin: 0;
+}
+div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  float: left;
+  width: calc((100% - 60px) / 5);
+  margin-left: 10px;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#29 | Opacity
+
+ <body>
+    <div class="one">Element</div>
+    <div class="two">Element</div>
+  </body>
+
+  .one {
+  background-color: red;
+  opacity: 0.1;
+}
+.two {
+  background-color: rgb(255 0 0 / 0.1)
+}
+
+------------------------------------------------------------------------------------------------------
