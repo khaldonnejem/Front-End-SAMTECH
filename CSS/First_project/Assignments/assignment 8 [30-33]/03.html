@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 8.3</title>
+    <style>
+      li {
+        background-color: #eeeeee;
+        margin-bottom: 5px;
+        padding: 10px;
+      }
+      .parent-ul {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+      }
+      ol li,
+      .child-ul li {
+        background-color: #ffff;
+      }
+      .parent-li-2 ol {
+        list-style-type: upper-roman;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="parent-ul">
+      <li class="parent-li-1">
+        HTML
+        <ol start="10">
+          <li>Slim</li>
+          <li>Pugjs</li>
+          <li>HAML</li>
+        </ol>
+      </li>
+      <li class="parent-li-2">
+        CSS
+        <ol start="10">
+          <li>SASS</li>
+          <li>LESS</li>
+          <li>PostCSS</li>
+        </ol>
+      </li>
+      <li class="parent-li-3">
+        JavaScript
+        <ul class="child-ul">
+          <li>Vuejs</li>
+          <li>Sveltejs</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

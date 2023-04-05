@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 8.2</title>
+    <style>
+      div {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+        background-color: #eeeeee;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        border-top: 2px solid #f44336;
+        border-bottom: 2px solid #f44336;
+        border-left: 2px solid #2196f3;
+        border-right: 2px solid #2196f3;
+        line-height: 1.5;
+      }
+      .top-left {
+        /*1*/
+        position: absolute;
+        top: -12px;
+        left: -15px;
+        border-right: 2px solid #f44336;
+      }
+      .bottom-left {
+        /*2*/
+        position: absolute;
+        bottom: -12px;
+        left: -15px;
+        border-right: 2px solid #f44336;
+      }
+      .top-right {
+        /*3*/
+        position: absolute;
+        top: -12px;
+        right: -15px;
+        border-left: 2px solid #f44336;
+      }
+      .bottom-right {
+        /*4*/
+        position: absolute;
+        bottom: -12px;
+        right: -15px;
+        border-left: 2px solid #f44336;
+      }
+      span {
+        background-color: #2196f3;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea
+      ipsum similique quasi rem, fugiat voluptatibus reiciendis nam debitis
+      earum quo veniam laudantium mollitia atque! Laborum ea nam doloribus.
+      <span class="top-left">1</span>
+      <span class="bottom-left">2</span>
+      <span class="top-right">3</span>
+      <span class="bottom-right">4</span>
+    </div>
+  </body>
+</html>

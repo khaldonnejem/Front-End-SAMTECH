@@ -897,3 +897,175 @@ div {
 }
 
 ------------------------------------------------------------------------------------------------------
+
+#30 | Position
+
+--static => Deafult
+// position: static;
+// top: 100px;
+// the position here will not be affected from any value from top;
+
+(top or right or bottom or left)
+
+--relative  => العنصر يتحرك بناء على نفسه
+// position: relative;
+// top: 100px;
+// top: -100px;
+// the position here will be affected from the top;
+
+
+--Absoluteالوضع المطلق
+// position: absolute;
+// top: 100px;
+// The element go out from the workflow , the element As if it is not on the page
+
+--Fixed يتحرك بناء على الصفحة بغض النظر عن موقعه
+
+
+
+--Sticky
+
+----------------Senario 1 <Absolute>-------------------
+ <body>
+    <div class="one">One</div>
+    <div class="two">Two</div>
+  </body>
+  div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+}
+.one {
+  background-color: red;
+  position: absolute;
+  /* left: 20px; */
+}
+.two {
+  background-color: green;
+}
+
+----------------Senario 2 <Absolute>-------------------
+  <body>
+    <div class="two">Two</div>
+    <div class="parent">
+      <div class="one">One</div>
+    </div>
+  </body>
+  .one {
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+}
+.parent {
+  width: 500px;
+  height: 300px;
+  background-color: blue;
+  position: relative;
+}
+
+//if the child has an position absolute and the parent hasn't and position relative , the element .one (child) will go out of the parent.. you should put in the parent the value relative position to stop the child of going out from the parent div..
+
+----------------Senario 3 <Fixed>-------------------
+body {
+  min-height: 5000px;
+}
+.parent {
+  width: 500px;
+  height: 300px;
+  background-color: blue;
+  position: relative; 
+}
+.one {
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+//here the element .one will be displayed in the right bottom of the screen , even if you scroll down , but if it absolute value it  will be in one place and if you scroll down it will be up , it will not shown like fixed value.
+
+----------------Senario 3 <Sticky>-------------------
+ <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non earum, sunt
+      repellat explicabo, est unde asperiores veritatis labore atque voluptates
+      quibusdam voluptate quod. Dolor reiciendis repellendus voluptatibus,
+      dolorem eaque necessitatibus!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non earum, sunt
+      repellat explicabo, est unde asperiores veritatis labore atque voluptates
+      quibusdam voluptate quod. Dolor reiciendis repellendus voluptatibus,
+      dolorem eaque necessitatibus!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non earum, sunt
+      repellat explicabo, est unde asperiores veritatis labore atque voluptates
+      quibusdam voluptate quod. Dolor reiciendis repellendus voluptatibus,
+      dolorem eaque necessitatibus!
+    </p>
+    <div>Sticky Scroll</div>
+  </body>
+
+  body {
+  min-height: 5000px;
+}
+
+div {
+ background-color: red;
+ color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+//here the element p will be stick in the head of page when you scroll down , you can specify where you want from the p element to stick
+
+------------------------------------------------------------------------------------------------------
+
+#31 | Z-Index
+
+z-index doesn't work without position.
+
+z-index: -1; its going behind all the elements
+
+  <body>
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+  </body>
+  div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+}
+.one {
+  background-color: red;
+  left: 20px;
+  top: 20px;
+  /* z-index: 3; */
+}
+.two {
+  background-color: green;
+  left: 15px;
+  top: 15px;
+  /* z-index: 2; */
+}
+.three {
+  background-color: blue;
+  /* z-index: 1; */
+}
+
+------------------------------------------------------------------------------------------------------
+
+#32 | Lists Styling
+
+
+list-style-type:∞;
+list-style-position:outside; out of list
+list-style-position:inside ; inside the list
+list-style-image;
+
+list-style:{type,position,image}
