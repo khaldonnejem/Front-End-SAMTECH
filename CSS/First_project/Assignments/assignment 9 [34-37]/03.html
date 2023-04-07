@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 9.3</title>
+    <style>
+      p {
+        width: 400px;
+        background-color: #efefef;
+        padding: 10px;
+        position: relative;
+        padding-left: 15px;
+        left: 30px;
+        margin-left: 60px;
+        border-left: 3px solid #e91e63;
+      }
+      p::before {
+        content: attr(data-person);
+        display: block;
+        padding: 5px;
+        position: absolute;
+        top: 5px;
+        background-color: #d4d4d4;
+        /* z-index: 1; */
+        left: -80px;
+        text-align: center;
+      }
+
+      p::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        width: 0;
+        height: 0;
+        margin-top: -10px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent #e91e63 transparent transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+    <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+    <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+  </body>
+</html>
