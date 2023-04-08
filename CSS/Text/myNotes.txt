@@ -1480,3 +1480,137 @@ ul li::before {
 ------------------------------------------------------------------------------------------------------
 
  #38 | Vendor Prefixes
+
+ /*
+
+  Vendors Prefixes
+
+  Chrome
+  Safari
+  Firefox
+  IE, Edge
+  Opera 
+  brave{used by me}
+
+  *Senario
+  [1] New CSS Feature Appeared
+  [2] Browsers Tests The Feature In Version X
+  [3] Browsers Add Prefix To Give Developers The Ability To Use It
+  [4] The Feature Is Fully Supported In Version Y, No Need For Prefix
+
+  -webkit- => Chrome, Safari, New Opera Version
+  -moz- => Firefox
+  -ms- => Ie, Edge
+  -o- => Old Version of Opera
+
+*/
+
+.class {
+  -webkit-border-radius: 10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  -ms-border-radius:10px;
+   /* theres no need to write previous 4 lines if the browser support the new feature */
+  border-radius:10px ;
+}
+
+/*
+  [1] Most of Users are Using Modern Browsers
+  [2] Vs Code Addon To Add The Prefix
+  [3] Task Runner
+*/
+
+
+
+/* https://caniuse.com/   --this website to see if you can use these feature */
+/* css-auto-prefix  -- this extension in vs code add the prefixe automatically */
+
+
+------------------------------------------------------------------------------------------------------
+
+#39 | Border Radius
+
+  <body>
+    <div></div>
+  </body>
+
+  div {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 20px auto;
+  border-radius: 6px;
+  /* border-radius: 50%; */
+  /* border-top-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px; */
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+#40 | Box Shadow And Examples
+
+
+  <body>
+    <div>Element</div>
+  </body>
+
+  
+/* 
+ H-shadow | V-shadow | Blur | Spread | Color | Inset
+H-shadow {Horozental}
+V-shadow {Vertical}
+Blur التغبيش
+Spread نسبة الانتشار
+Color 
+Inset داخلي ام خارجي
+*/
+
+div {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 300px;
+  box-shadow:
+    0 0 10px 0 #F10000,
+    0 0 10px 0 #000,
+    0 0 10px 0 #080,
+    0 0 10px 0 #00f,
+    0 0 10px 0 yellow;
+}
+
+------------------------------------------------------------------------------------------------------
+
+ #41 | The Box Model And Box Sizing
+
+ <body>
+    <div class="parent">
+      <div class="one">One</div>
+      <div class="one">One</div>
+    </div>
+  </body>
+
+  * {/* that mean you will add these to all elements*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.parent {
+  width: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+  box-sizing: border-box;
+}
+.one {
+  background-color: #eee;
+  width: 300px;
+  float: left;
+  padding: 10px;
+  
+
+}
+
+------------------------------------------------------------------------------------------------------
+

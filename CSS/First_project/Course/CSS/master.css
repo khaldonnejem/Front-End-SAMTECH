@@ -1,43 +1,21 @@
+* {/* that mean you will add these to all elements*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .parent {
-  margin-bottom: 20px;
+  width: 600px;
   overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+  box-sizing: border-box;
 }
 .one {
   background-color: #eee;
-  padding: 10px;
-  width: 600px;
+  width: 300px;
   float: left;
-  position: relative;
-}
-.one::after { 
-  content: "";/*it should be exist , to show it*/
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  right: -10px;
-  top: 0;
-  background-color: #009688;
-}
-.one::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  width: 0;
-  height: 0;
-  /*background-color: white;*/
-  margin-top: -10px;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent #009688 transparent transparent;
-}
-.user {
-  background-color: #eee;
-  width: 50px;
-  margin-right: 20px;
   padding: 10px;
-  height: 55.5px;
-  float: left;
-  font-size: 50px;
-  text-align: center;
+  border: 10px solid red;
+
 }
