@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 11.2</title>
+    <style>
+      div {
+        background-color: #eee !important;
+        width: 400px !important;
+        margin: auto;
+        border: 0 !important;
+        position: relative;
+        text-align: center;
+        padding: 0 !important;
+
+        /* color: transparent !important; */
+      }
+      div::after {
+        content: "Elzero";
+        position: absolute;
+        background-color: #eee !important;
+        color: black !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 30px !important;
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: red;
+        color: white;
+        padding: 20px;
+        border: 1px solid blue;
+        font-size: 80px;
+      "
+    >
+      Hello Div
+    </div>
+  </body>
+</html>
+
+<!-- display: flex;
+        justify-content: center;
+        align-items: center; 
+    -->
+
+<!-- 
+              /* visibility: hidden; */
+        /* display: none; */
+         -->

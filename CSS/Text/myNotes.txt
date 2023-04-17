@@ -1557,7 +1557,7 @@ ul li::before {
 
   
 /* 
- H-shadow | V-shadow | Blur | Spread | Color | Inset
+ H-shadow , V-shadow , Blur , Spread , Color , Inset
 H-shadow {Horozental}
 V-shadow {Vertical}
 Blur التغبيش
@@ -1610,6 +1610,188 @@ div {
   padding: 10px;
   
 
+}
+
+------------------------------------------------------------------------------------------------------
+
+ #42 | Transition الإنتقال
+
+التحكم في حالة العنصر وهو ينتقل من حالة الى حالة
+control of elements state when it move form a state to another state
+
+-نتحكم في مدة الانتقال من حالة الى حالة
+-نتحكم في الخواص التي نريد
+-نتحكم في التاخير
+
+/*
+  Transition
+  --Duration
+  --property:https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+  --Delay
+  --Timing Function
+
+*/
+
+
+    <body>
+      <div class="one">One</div>
+    </body>
+
+
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.one {
+  background-color: #eee;
+  width: 200px;
+  height: 100px;
+ /* transition-duration: 500ms; /*مدة الانتقال*/
+  /* transition-delay: .2s; */
+  /*transition-property:all ; /*deafult value is all*/ 
+  /* transition-property: margin-left , margin-top ; */
+  /* transition-property: width; */
+  /*transition-timing-function: width;/* control on the curve of speed*/
+  
+  /*transition-timing-function:ease;/*ease is the deafult value ,starts slowly then fast then ends slowly*/
+ /* transition-timing-function: linear;/*same speed */
+ /* transition-timing-function: ease-in;/*slow in the start*/
+ /* transition-timing-function: ease-out;/*slow in the end*/
+  /* transition-timing-function: ease-in-out;starts slowly and ends slowly , no speed here */
+  /* transition: width 3s , height 1s; */
+  /*transition: all .5s 2s linear; /*it will wait for 2 seconds to start the effect , and the time of effect is .5s*/
+  transition: all 2s .5s linear; /*it will wait for .5s seconds to start the effect , and the time of effect is 2s*/
+}
+
+.one:hover {
+  /* margin-left: 20px;
+  margin-top: 20px; */
+  width: 280px;
+  height: 120px;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#43 |!Important Declaration And Use Cases
+
+--Maybe that element in the html code that has inline style you cannot access it, so you should do 'important!'
+
+--Or if you put the link:css in the body after the link in the head , and inside that link in the body the element <a style="color:red;"></a> , like that this link will overwrite on you're link so you should use 'important!'
+
+
+ <body>
+    <div class="one" style="background-color: red;">One</div>
+  </body>
+
+  .one {
+  background-color: #EEE !important;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#44 | The Margin Collapse
+
+  <body>
+    <div class="parent">
+      <div class="one"></div>
+      <div class="two">
+        <div class="up"></div>
+        <div class="down"></div>
+      </div>
+    </div>
+  </body>
+
+
+
+  /*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+.parent {
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+.parent .one,
+.parent .two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.one {
+  background-color: #ddd;
+}
+.two {
+  background-color: #aaa;
+}
+.up {
+  background-color: red;
+  color: white;
+  height: 80px;
+  margin-bottom: 40px;
+}
+.down {
+  background-color: green;
+  color: white;
+  height: 80px;
+  margin-top: 40px;
+}
+
+------------------------------------------------------------------------------------------------------
+
+#45 | CSS Variables And Trainings
+
+  <body>
+    <div class="main">Main Div</div>
+    <h2>Main Title</h2>
+    <p>My Paragraph</p>
+    <a href="#">My Link</a>
+    <div class="local">Local</div>
+  </body>
+
+  /*
+  CSS Variables
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fall Back Value)
+  fallback mean if the varible name is not exist , it will come 
+*/
+
+:root {/* for global variables*/
+  --mainColor: blue;
+  --mainPadding: 10px;
+}
+.main {
+  background-color: var(--mainColor, black);
+  color: white;
+  padding: calc(20px + var(--mainPadding)); /* that mean padding is 30px*/
+}
+h2 {
+  color: var(--mainColor);
+  background-color: #eee;
+  padding: var(--mainPadding);
+}
+
+p {
+  color: var(--mainColor);
+  border: 2px solid var(--mainColor);
+  padding: var(--mainPadding);
+}
+a:hover {
+  color: var(--mainColor);
+}
+.local {
+  --mainColor: black;
+  background-color: var(--mainColor);
+  color: white;
 }
 
 ------------------------------------------------------------------------------------------------------

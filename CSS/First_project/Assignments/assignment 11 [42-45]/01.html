@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 11.1</title>
+
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .parent {
+        background-color: #eee;
+        width: 300px;
+        height: 200px;
+        margin: 20px auto;
+        padding: 20px;
+        position: relative;
+        transition: top 0.5s ease;
+      }
+
+      .parent:hover {
+        top: -15px;
+      }
+      .two {
+        position: absolute;
+        background-color: #bababd;
+        padding: 20px;
+        margin-top: 25px;
+        transition: margin-top 0.5s linear;
+      }
+
+      .parent:hover .two {
+        top: 20px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Will Go Up On Hover in Half Second
+      <div class="two">Will Go Down After Half Second</div>
+    </div>
+  </body>
+</html>
