@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 11.3</title>
     <style>
-      :root {
-        --mainColor: #009688;
-        --mainPadding: 10px;
-      }
+      /* :root {
+          --mainColor: #009688;
+          --mainPadding: 10px;
+        } */
 
       div {
         width: 400px;
-        color: var(--mainColor);
-        border: 3px solid var(--mainColor);
-        padding: calc(10px + var(--mainPadding));
+        color: var(--mainColor, red);
+        border: 3px solid var(--mainColor, black);
+        padding: calc(10px + var(--mainPadding, 10px));
         margin: 10px;
       }
     </style>
