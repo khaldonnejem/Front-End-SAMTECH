@@ -1796,3 +1796,499 @@ a:hover {
 
 ------------------------------------------------------------------------------------------------------
 
+ #46 | Flex Box Parent - Direction, Wrap, Flow
+
+
+  <body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+    <hr />
+    <h3>Float</h3>
+    <div class="float">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </body>
+
+
+
+  /*
+  Flexible Box البكس المرن
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  */
+  
+  /* - flex-direction: row-reverse => reverse the row in the same page direction */
+  /* - flex-direction: column => Arranges items vertically  */
+    /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap-reverse; */
+  flex-flow: row wrap-reverse;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+ #47 | Flex Box Parent - Justify Content
+
+
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+  <body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+    <hr />
+    <h3>Float</h3>
+    <div class="float">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </body>
+
+  /*
+  - justify-content: flex-start => Default Value
+
+ */
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;/*around + between*/
+  
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: flex-start; */
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(98%/3);
+  text-align: center;
+  padding: 20px;
+}
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: calc(94%/3);
+  text-align: center;
+  padding: 20px;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+
+
+------------------------------------------------------------------------------------------------------
+
+ #48 | Flex Box Parent - Align Items
+
+
+  <body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div class="one">One</div>
+      <div class="two">Two</div>
+      <div>Three</div>
+    </div>
+    <hr />
+    <h3>Float</h3>
+    <div class="float">
+      <div class="one">One</div>
+      <div class="two">Two</div>
+      <div>Three</div>
+    </div>
+    <div class="center">Center</div>
+  </body>
+
+
+  /*
+ - align-items: stretch => Default Value
+
+ */
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(100%/3);
+  text-align: center;
+  padding: 20px;
+}
+.flex .one,
+.float .one {
+  height: 80px;
+}
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: calc(100%/3);
+  text-align: center;
+  padding: 20px;
+}
+
+.center {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+------------------------------------------------------------------------------------------------------
+
+- #49 | Flex Box Parent - Align Content
+
+
+  <body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>six</div>
+    </div>
+  </body>
+
+
+  /*
+- align-content: stretch => Default Value
+
+justify-content توزع الكونتنت كامل
+
+align-items بتوزه الآيتمز بطريقة طولية أو محاذاة للآيتمز بطريقة طولية
+ */
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(100%/3);
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+------------------------------------------------------------------------------------------------------
+
+#50 | Flex Box Child - Grow, Shrink, Order
+
+  <body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+  /*
+  For Child
+  - flex-grow: 0 => Default Value
+  - flex-shrink: 1 => Default Value
+  - order: 0 => Default Value
+ */
+
+
+* {
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width:80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+Every flex item has a deafult value of zero
+
+------------------------------------------------------------------------------------------------------
+
+#51 | Flex Box Child - Flex Basis, Flex Shorthand
+
+  <body>
+    <div class="flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <div class="in">In</div>
+  </body>
+  /*
+   - flex-basis: auto => Default Value
+  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+ */
+
+
+* {
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: inline-flex;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width:80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+.in {
+  display: inline-block;
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+#52 | Flex Box Child - Align Self, Games, Task
+
+
+
+
+https://flexboxfroggy.com/
+https://mastery.games/flexboxzombies/
+https://en.wikipedia.org/wiki/Holy_grail_(web_design)
+
+
+
+
+  <body>
+    <div class="flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+
+  /*
+   - align-self: auto => Default Value محاذاة للعنصر نفسه
+   align-self:stretch....
+ */
+
+
+* {
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 800px;
+  height: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width:80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+
+
+
+------------------------------------------------------------------------------------------------------
+
+#53 | Finish Flex Froggy Game
+
+https://flexboxfroggy.com/
+
+justify-content:
+
+flex-start: Items align to the left side of the container.
+flex-end: Items align to the right side of the container.
+center: Items align at the center of the container.
+space-between: Items display with equal spacing between them.
+space-around: Items display with equal spacing around them.
+
+
+align-items:
+
+flex-start: Items align to the top of the container.
+flex-end: Items align to the bottom of the container.
+center: Items align at the vertical center of the container.
+baseline: Items display at the baseline of the container.
+stretch: Items are stretched to fit the container.
+
+
+
+flex-direction:
+
+row: Items are placed the same as the text direction.
+row-reverse: Items are placed opposite to the text direction.
+column: Items are placed top to bottom.
+column-reverse: Items are placed bottom to top.
+
+
+order:
+0 1 2 3 4 .....
+
+
+flex-wrap:
+
+nowrap: Every item is fit to a single line.
+wrap: Items wrap around to additional lines.
+wrap-reverse: Items wrap around to additional lines in reverse.
+
+
+
+flex-flow:
+ flex-direction and flex-wrap
+ flex-flow: row wrap
+
+
+
+align-content:
+
+flex-start: Lines are packed at the top of the container.
+flex-end: Lines are packed at the bottom of the container.
+center: Lines are packed at the vertical center of the container.
+space-between: Lines display with equal spacing between them.
+space-around: Lines display with equal spacing around them.
+stretch: Lines are stretched to fit the container.
+
+https://linktr.ee/khaldonnejem

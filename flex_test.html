@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test 12.3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        background-color: #eeeeee;
+        width: 600px;
+        height: 300px;
+        margin: 20px auto;
+        padding: 15px;
+        display: flex;
+        flex-flow: wrap row-reverse;
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        /* align-content: space-evenly; */
+      }
+
+      .parent div {
+        background-color: #607d8b;
+        color: white;
+        text-align: center;
+        padding: 13.5px;
+        width: calc(100% / 3);
+      }
+
+      .parent .one {
+        align-self: flex-end;
+        order: 1;
+      }
+      .parent .two {
+        align-self: stretch;
+        order: 1;
+      }
+      .parent .three {
+        align-self: flex-start;
+        order: -3;
+      }
+      .parent .four {
+        align-self: stretch;
+        order: -4;
+      }
+      .parent .five {
+        align-self: stretch;
+        order: 1;
+      }
+      .parent .six {
+        align-self: stretch;
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+      <div class="five">5</div>
+      <div class="six">6</div>
+    </div>
+  </body>
+</html>

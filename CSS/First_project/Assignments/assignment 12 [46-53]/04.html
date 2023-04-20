@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 12.4</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        background-color: #eee;
+        width: 600px;
+        height: 300px;
+        margin: 20px auto;
+        padding: 10px;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      .parent div {
+        background-color: #009688;
+        color: white;
+        text-align: center;
+        /* padding: 20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 31%;
+        width: 7%;
+      }
+
+      div .one {
+        /* align-self: flex-end; */
+        /* margin-right: -155px; */
+      }
+      div .two {
+        align-self: flex-start;
+        width: 300px;
+      }
+      div .three {
+        /* align-self: flex-end; */
+        /* margin-top: 220px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+    </div>
+  </body>
+</html>

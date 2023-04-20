@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holy Grail</title>
+    <style>
+      /* Set the container as a flex container */
+      .page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Set the main content area as a flex container and use flex-grow to fill available space */
+      .main-area {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      /* Set the left and right columns as flex containers with flex-grow to expand to fill available space */
+      .content,
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      /* Set the width and background color for the left and right columns */
+      .content {
+        background-color: lightgray;
+        width: 66.66%;
+      }
+
+      .sidebar {
+        background-color: darkgray;
+        width: 33.33%;
+      }
+
+      /* Style the header and footer */
+      .header,
+      .footer {
+        background-color: gray;
+        color: white;
+        padding: 10px;
+      }
+
+      /* Style the logo and links in the header */
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .links li {
+        margin-right: 10px;
+      }
+
+      /* Style the copyright and design information in the footer */
+      .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="logo">Logo</div>
+        <ul class="links">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="main-area">
+        <div class="content">Content</div>
+        <div class="sidebar">Sidebar</div>
+      </div>
+      <div class="footer">
+        <div class="copyright">Copyright 2021</div>
+        <div class="design">Designed By Elzero</div>
+      </div>
+    </div>
+  </body>
+</html>

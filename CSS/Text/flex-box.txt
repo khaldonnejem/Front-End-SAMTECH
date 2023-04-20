@@ -1,0 +1,126 @@
+My notes on Flexbox:
+
+Flex box is an improvement that came after float.
+
+It is used to lay out elements in a variety of ways, especially next to each other.
+
+The difference from float, 
+is that flexbox provides much more control over the elements that are laid out by it.
+ex: We can control the direction of the element with 
+flex-direction: row/column and reverse versions. 
+
+The reverse versions of properties like reverse-row already allow you to do things that would be very tedious and hard to do with float.
+
+The flexbox model has properties that are used on the flex container and some on the flex items.
+
+Flex container is the parent element.
+Flex Items are the direct children of the flex container
+<div class="flex-container">
+	<div class="flex-item">item 1</div>
+	<div class="flex-item">item 2</div>
+</div>
+
+
+**Flex container Properties**
+
+-flex-direction: row, column and reverse versions of them.
+
+Flex direction decides the main axis and the cross (secondary) axis that will affect how alignment properties will function.
+If flex-direction:row; then the main axix is x and the cross axix is y.
+IF flex-direction:column; then the main axis is y and the cross axis is x.
+
+-flex-wrap: nowrap, wrap, etc.
+Decides how elements that exceed the width/height are treated.
+
+-flex-flow: row wrap
+Shorthand for flow-direction + flow-wrap
+
+-justify-content: 
+used to align the flex items on the main axis. If is x then align horizontally and vice versa. Also used to space out elements.
+
+-align-items: 
+Used to align flex items on the cross axis. Also used to space out elements.
+
+Note: justify-content and align-items can also be used to easily align text inside a div. In that case the text is treated like a flex-item of the div/any flex-container.
+
+-align-content: 
+Used to align flex items on the cross axis,
+while controlling how multiple lines are spaced apart from each other. 
+Meaning: if the flex-items are too many that they can't stay on one line and need to be wrapped. align-content aligns the items and deals with the space between them
+Example:
+flex-direction: row;
+align-content:flex-start;
+will align the flex items on the top of the flex-container, with no spacing between them done by the flexbox.
+
+The default value is align-content:stretch.
+Which does the following:
+If the combined size of the items along the cross axis is less than the size of the alignment container, any auto-sized items have their size increased equally so that the combined size exactly fills the alignment container along the cross axis.
+
+Basically, each item will get filled with empty spaces in equal amount until the elements fill the flex container.
+
+
+
+Important note: reverse values, reverse the order AND the alignment of the axis it targets.
+For example, if the page was English (direction:ltr)
+flex-direction:row;
+justify-content: reverse-row;
+
+Will reverse the order of the items and display them from right to left
+
+And if we use:
+flex-direction: column;
+justify-content: reverse-row;
+
+
+
+**Flex items Properties**
+
+-order:
+This decides the order of the flex items inside the flex container.
+The default is 0, and if all items have the same order, the order relies on the html placing order.
+
+Elements with lower order values are placed first.
+<div style="order:5">item 1</div>
+<div style="order:1">item 2</div>
+<div style="order:3">item 4</div>
+<div style="order:0">item 5</div>
+
+The items will show up like: 
+item 5 > item 2 > item 4 > item 1
+
+
+-flex-grow:
+
+This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
+
+If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, that child would take up twice as much of the space either one of the others. 
+Or it will try, at least. 
+Meaning, if there is no space for the flex-item to take twice as much space it will only take the available space like the other flex items.
+
+-flex-shrink:
+The opposite of flex-grow.
+
+
+-flex-basis:
+
+Decides the start/default size or the width and height of the element before the grow and shrink properties take effect.
+It can replace the width and height properties in flex items and can take same values (e.g. 20%, 5rem, etc.)
+
+-flex:
+
+Shorthand property for: 
+[flex-grow flex-shrink flex-basis]
+
+The default value is [0 1 auto]
+
+It is recommended that you use this shorthand property rather than set the individual properties. Cause the shorthand sets the other values intelligently.
+
+If we only give it a flex-grow it will automatically set default values for the rest 
+[1 1 0%]
+To accommodate the most common scenarios of only wanting the flex items to fill up the flex-container responsively.
+
+
+-align-self
+
+Changes the alignment on the cross axis, overriding the align-items property value on the flex-container.
+
