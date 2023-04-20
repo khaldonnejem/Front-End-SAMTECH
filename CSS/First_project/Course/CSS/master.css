@@ -1,27 +1,14 @@
-/*
-   - align-self: auto => Default Value محاذاة للعنصر نفسه
-   align-self:stretch....
- */
+/* 
+Caret Color
+Pointer Events
+*/
 
-
-* {
-  box-sizing: border-box;
+input {
+  caret-color: red;
 }
-.flex {
-  background-color: #eee;
-  width: 800px;
-  height: 300px;
-  padding: 20px;
-  margin: 20px auto;
-  display: flex;
-  align-items: flex-start;
+a {
+  pointer-events: none;
 }
-.flex div {
-  background-color: #f00;
-  color: white;
-  width:80px;
-  text-align: center;
-  padding: 20px;
-  margin-right: 5px;
+a:hover {
+  color: red;
 }
-

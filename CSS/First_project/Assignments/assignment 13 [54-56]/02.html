@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 12.2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      div {
+        width: 600px;
+        margin: 15px auto;
+        position: relative;
+      }
+      input {
+        width: 600px;
+        background-color: #eee;
+        display: block;
+        padding: 20px;
+        border: none;
+        caret-color: red;
+      }
+
+      div::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 600px;
+        background-color: #f44336;
+        height: 5px;
+
+        background-image: linear-gradient(to right, #f44336 50%, #3fb0a5 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div><input type="text" value="Elzero" /></div>
+    <div><input type="text" placeholder="Two" /></div>
+    <div><input type="text" placeholder="Three" /></div>
+  </body>
+</html>

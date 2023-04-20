@@ -2292,3 +2292,112 @@ space-around: Lines display with equal spacing around them.
 stretch: Lines are stretched to fit the container.
 
 https://linktr.ee/khaldonnejem
+
+------------------------------------------------------------------------------------------------------
+
+#54 | Filters
+
+
+<body>
+    <img decoding="async" src="../../image/khaldon.jpg" alt="" />
+  </body>
+
+
+  /*
+  Filters
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  transition: .3s;
+  /* filter: grayscale(100%); */
+  /* filter: blur(4px); */
+  /* filter: invert(100%); */
+  /* filter: brightness(50%); */
+  /* filter: contrast(50%); */
+  filter: hue-rotate(90deg);
+}
+
+img:hover {
+  /* filter: grayscale(0); */
+  /* filter: blur(0); */
+  filter: invert(0);
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+ #55 | Gradients
+
+   <body>
+    <div>Gradients</div>
+  </body>
+
+
+/*
+  Gradients
+  linear-gradient(Direction Or Angle, Color Stop 1, Color Stop 2, ....)
+*/
+
+/* linear-gradient(0deg,red,blue,yellow, green , pink ,aqua,aquamarine,azure,beige,bisque,black,violet,blueviolet,brown,burlywood,cadetblue,chartreuse,chocolate,coral,cornflowerblue,cornsilk,crimson,cyan,darkblue,darkcyan,darkgoldenrod,darkgray,gray,gold,darkgreen,darkkhaki,darkmagenta,darkolivegreen,darkorange,orange,darkorchid,darkred,darksalmon,darkseagreen,darkslateblue,darkslategray,turquoise,darkturquoise,darkviolet,deeppink,deepskyblue,dimgray,dodgerblue,firebrick,floralwhite,forestgreen,fuchsia,gainsboro,ghostwhite,goldenrod,greenyellow,honeydew,hotpink,indianred,indigo,ivory,khaki,lavender,lavenderblush,lawngreen,lemonchiffon,lightblue,lightcoral,lightcyan,lightgoldenrodyellow,lightgray,lightgreen,lightpink,lightsalmon,lightseagreen,lightskyblue,lightslategray); */
+
+div {
+  /* background-image: linear-gradient(90deg , red,blue,yellow); */
+  /* background-image: linear-gradient(to right , red,blue,yellow); */
+  /* background-image: linear-gradient(to right , red 80%,blue,yellow); */
+  /* background-image: linear-gradient(to right , red 150px,blue,yellow); */
+  
+  width: 400px;
+  height: 200px;
+  background-color: #eee;
+  margin: 20px auto;
+position: relative;
+padding: 10px;
+}
+div:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 10px;
+
+  background-image: linear-gradient(to right ,#2980b9 20%,#27ae60 20% ,#27ae60 40% ,#d35400 40%,#d35400 60%,#8e44ad 60% ,#8e44ad 80% ,#c0392b 80% );
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+ #56 | Pointer Events And Caret Color
+
+   <body>
+    <input type="text" />
+    <a href="https://google.com">Google</a>
+    <p contenteditable="true">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
+      culpa dicta vitae quas temporibus nemo ducimus odio animi? Blanditiis
+      voluptas suscipit id et ea eveniet doloribus libero labore commodi
+      eligendi!
+    </p>
+  </body>
+
+
+  /* 
+Caret Color
+Pointer Events
+*/
+
+input {
+  caret-color: red;
+}
+a {
+  pointer-events: none;
+}
+a:hover {
+  color: red;
+}
+------------------------------------------------------------------------------------------------------
